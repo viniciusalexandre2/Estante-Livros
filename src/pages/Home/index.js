@@ -14,7 +14,15 @@ export default function Home() {
     <>
       <Header />
       <div>
-        <h1>Estante de Livros</h1>
+        <h1>Estou Lendo</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </div>
+      <div>
+        <h1>Quero Ler</h1>
+        <h2>Start editing to see some magic happen!</h2>
+      </div>
+      <div>
+        <h1>Já Lido</h1>
         <h2>Start editing to see some magic happen!</h2>
       </div>
     </>

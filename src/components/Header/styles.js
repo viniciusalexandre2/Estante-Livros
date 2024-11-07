@@ -3,11 +3,12 @@ import { styled } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
+  background-color: black;
   justify-content: space-between;
   padding: 5px;
   padding-right: 50px;
   width: 100vw;
-  min-height: 50px;
+  min-height: 85px;
 
   img {
     width: 7%;

@@ -16,7 +16,7 @@ export default function Search() {
     <>
       <Header />
       <ContainerSearch>
-        <h1>Todos os Livros</h1>ccc
+        <h1>Todos os Livros</h1>
         <InputSearch placeholder="Digite o nome do livro" />
       </ContainerSearch>
     </>

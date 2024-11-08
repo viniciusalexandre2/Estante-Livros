@@ -17,9 +17,9 @@ function Card({ data }) {
       <ContainerText>
         <h1>{data.title}</h1>
         <ContainerButton>
-          <ButtonCard>Estou Lendo</ButtonCard>
+          <ButtonCard>Estou lendo</ButtonCard>
           <ButtonCard>Quero ler</ButtonCard>
-          <ButtonCard>Já Lido</ButtonCard>
+          <ButtonCard>Já lido</ButtonCard>
         </ContainerButton>
       </ContainerText>
     </Container>

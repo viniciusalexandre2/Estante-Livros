@@ -1,3 +1,4 @@
+import { api } from "../../services/api";
 import ButtonCard from "../Button";
 import {
   Container,
@@ -8,7 +9,13 @@ import {
 } from "./styles";
 
 function Card({ data }) {
-  console.log(data);
+  const handleClick = (status) => {
+    api
+      .post("/comments", { bookId: data.id, comment: status })
+      .then(function (response) {
+        console.log(response.data);
+      });
+  };
   return (
     <Container>
       <ContainerImg>
@@ -17,9 +24,13 @@ function Card({ data }) {
       <ContainerText>
         <h1>{data.title}</h1>
         <ContainerButton>
-          <ButtonCard>Estou lendo</ButtonCard>
-          <ButtonCard>Quero ler</ButtonCard>
-          <ButtonCard>Já lido</ButtonCard>
+          <ButtonCard onClick={() => handleClick("estoulendo")}>
+            Estou lendo
+          </ButtonCard>
+          <ButtonCard onClick={() => handleClick("queroler")}>
+            Quero ler
+          </ButtonCard>
+          <ButtonCard onClick={() => handleClick("jalido")}>Já lido</ButtonCard>
         </ContainerButton>
       </ContainerText>
     </Container>

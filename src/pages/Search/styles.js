@@ -7,16 +7,6 @@ export const ContainerSearch = styled.div`
   justify-content: space-between;
 `;
 
-export const InputSearch = styled.input`
-  width: 20%;
-  height: 40px;
-  padding-left: 10px;
-  font-size: 16px;
-  border-radius: 10px;
-  background-color: #8f8f8f;
-  border: none;
-`;
-
 export const ContainerMain = styled.div`
   display: flex;
   padding-left: 30px;

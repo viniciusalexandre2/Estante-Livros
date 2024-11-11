@@ -1,4 +1,5 @@
 import { api } from "../../services/api";
+import { useLocation } from "react-router-dom";
 import ButtonCard from "../Button";
 import {
   Container,
@@ -8,12 +9,16 @@ import {
   Button,
 } from "./styles";
 
-function Card({ data }) {
+function Card({ data, getBooksCategories }) {
+  const location = useLocation();
+
   const handleClick = (status) => {
     api
       .post("/comments", { bookId: data.id, comment: status })
       .then(function (response) {
-        console.log(response.data);
+        location.pathname === "/"
+          ? getBooksCategories()
+          : alert("Categoria Selecionada!");
       });
   };
   return (

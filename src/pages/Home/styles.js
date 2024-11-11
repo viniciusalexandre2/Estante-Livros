@@ -4,10 +4,6 @@ export const ContainerReading = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
-
-  div {
-    display: flex;
-  }
 `;
 
 export const ContainerMain = styled.div`
@@ -15,4 +11,10 @@ export const ContainerMain = styled.div`
   flex-direction: column;
   gap: 100px;
   padding: 20px;
+`;
+
+export const ContainerBooks = styled.div`
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 `;

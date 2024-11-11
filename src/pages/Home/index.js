@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 
 import Header from "../../components/Header";
 import Card from "../../components/CardBook";
-import { ContainerMain, ContainerReading } from "./styles";
+import { ContainerBooks, ContainerMain, ContainerReading } from "./styles";
 
 export default function Home() {
   const [reading, setReading] = useState([]);
   const [wantRead, setWantRead] = useState([]);
   const [alreadyRead, setAlreadyRead] = useState([]);
 
-  useEffect(() => {
+  const getBooksCategories = () => {
     const arrayBooks = [];
     const arrayBooks2 = [];
     const arrayBooks3 = [];
@@ -29,6 +29,10 @@ export default function Home() {
         setAlreadyRead(arrayBooks3);
       });
     });
+  };
+
+  useEffect(() => {
+    getBooksCategories();
   }, []);
   return (
     <>
@@ -36,24 +40,42 @@ export default function Home() {
       <ContainerMain>
         <ContainerReading>
           <h1>Estou Lendo</h1>
-          <div>
+          <ContainerBooks>
             {reading &&
-              reading.map((book) => <Card data={book} key={book.id} />)}
-          </div>
+              reading.map((book) => (
+                <Card
+                  data={book}
+                  getBooksCategories={getBooksCategories}
+                  key={book.id}
+                />
+              ))}
+          </ContainerBooks>
         </ContainerReading>
         <ContainerReading>
           <h1>Quero Ler</h1>
-          <div>
+          <ContainerBooks>
             {wantRead &&
-              wantRead.map((book) => <Card data={book} key={book.id} />)}
-          </div>
+              wantRead.map((book) => (
+                <Card
+                  data={book}
+                  getBooksCategories={getBooksCategories}
+                  key={book.id}
+                />
+              ))}
+          </ContainerBooks>
         </ContainerReading>
         <ContainerReading>
           <h1>Já Lido</h1>
-          <div>
+          <ContainerBooks>
             {alreadyRead &&
-              alreadyRead.map((book) => <Card data={book} key={book.id} />)}
-          </div>
+              alreadyRead.map((book) => (
+                <Card
+                  data={book}
+                  getBooksCategories={getBooksCategories}
+                  key={book.id}
+                />
+              ))}
+          </ContainerBooks>
         </ContainerReading>
       </ContainerMain>
     </>

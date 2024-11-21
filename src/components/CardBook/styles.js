@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerImg = styled.div`
-  height: 80%;
+  height: 77%;
   img {
     border-radius: 15px 15px 0px 0px;
     width: 100%;
@@ -24,7 +24,7 @@ export const ContainerText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20%;
+  height: 23%;
   margin-top: 15px;
   font-size: 9px;
 `;

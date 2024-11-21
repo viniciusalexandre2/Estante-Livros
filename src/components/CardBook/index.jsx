@@ -16,10 +16,8 @@ function Card({ data, getBooksCategories }) {
     api
       .post("/comments", { bookId: data.id, comment: status })
       .then(function (response) {
-        getBooksCategories()
-
         location.pathname === "/"
-          ? null
+          ? getBooksCategories()
           : alert("Categoria Selecionada!");
       });
   };

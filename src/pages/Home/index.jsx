@@ -11,22 +11,23 @@ export default function Home() {
   const [alreadyRead, setAlreadyRead] = useState([]);
 
   const getBooksCategories = () => {
-    const arrayBooks = [];
-    const arrayBooks2 = [];
-    const arrayBooks3 = [];
+    const arrayBooksEstouLendo = [];
+    const arrayBooksQueroLer = [];
+    const arrayBooksJaLido = [];
+
     api.get("/books").then((response) => {
       response.data.map((book) => {
         const lastUpdate = book.comments.length - 1;
-        if (book.comments[lastUpdate] === "estoulendo") {
-          arrayBooks.push(book);
-        } else if (book.comments[lastUpdate] === "queroler") {
-          arrayBooks2.push(book);
-        } else if (book.comments[lastUpdate] === "jalido") {
-          arrayBooks3.push(book);
+        if (book.comments[lastUpdate] === "Estou lendo") {
+          arrayBooksEstouLendo.push(book);
+        } else if (book.comments[lastUpdate] === "Quero ler") {
+          arrayBooksQueroLer.push(book);
+        } else if (book.comments[lastUpdate] === "Já lido") {
+          arrayBooksJaLido.push(book);
         }
-        setReading(arrayBooks);
-        setWantRead(arrayBooks2);
-        setAlreadyRead(arrayBooks3);
+        setReading(arrayBooksEstouLendo);
+        setWantRead(arrayBooksQueroLer);
+        setAlreadyRead(arrayBooksJaLido);
       });
     });
   };

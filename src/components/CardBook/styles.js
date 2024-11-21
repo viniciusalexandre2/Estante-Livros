@@ -31,5 +31,6 @@ export const ContainerText = styled.div`
 
 export const ContainerButton = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-top: 20px;
 `;

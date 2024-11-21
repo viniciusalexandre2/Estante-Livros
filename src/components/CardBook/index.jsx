@@ -6,21 +6,24 @@ import {
   ContainerImg,
   ContainerText,
   ContainerButton,
-  Button,
 } from "./styles";
 
 function Card({ data, getBooksCategories }) {
   const location = useLocation();
+  const lastUpdate = data.comments.length - 1;
 
   const handleClick = (status) => {
     api
       .post("/comments", { bookId: data.id, comment: status })
       .then(function (response) {
+        getBooksCategories()
+
         location.pathname === "/"
-          ? getBooksCategories()
+          ? null
           : alert("Categoria Selecionada!");
       });
   };
+
   return (
     <Container>
       <ContainerImg>
@@ -29,13 +32,24 @@ function Card({ data, getBooksCategories }) {
       <ContainerText>
         <h1>{data.title}</h1>
         <ContainerButton>
-          <ButtonCard onClick={() => handleClick("estoulendo")}>
+          <ButtonCard
+            categorySelected={data.comments[lastUpdate]}
+            onClick={() => handleClick("Estou lendo")}
+          >
             Estou lendo
           </ButtonCard>
-          <ButtonCard onClick={() => handleClick("queroler")}>
+          <ButtonCard
+            categorySelected={data.comments[lastUpdate]}
+            onClick={() => handleClick("Quero ler")}
+          >
             Quero ler
           </ButtonCard>
-          <ButtonCard onClick={() => handleClick("jalido")}>Já lido</ButtonCard>
+          <ButtonCard
+            categorySelected={data.comments[lastUpdate]}
+            onClick={() => handleClick("Já lido")}
+          >
+            Já lido
+          </ButtonCard>
         </ContainerButton>
       </ContainerText>
     </Container>

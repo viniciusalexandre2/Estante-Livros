@@ -5,6 +5,6 @@ export const api = axios.create({
   timeout: 2000,
   headers: {
     "X-Custom-Header": "foobar",
-    Authorization: "Bearer DzMbgC0mJvcw08AxeX4PudV3k0cMFyO5r7QcqAtT",
+    Authorization: "Bearer 12120323",
   },
 });

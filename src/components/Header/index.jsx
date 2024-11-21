@@ -9,10 +9,10 @@ function Header() {
     <Container>
       <img src={Logo} />
       <div>
-        <ButtonNav to="/" isactive={location.pathname === "/"}>
+        <ButtonNav to="/" isActive={location.pathname === "/"}>
           Home
         </ButtonNav>
-        <ButtonNav to="/search" isactive={location.pathname === "/search"}>
+        <ButtonNav to="/search" isActive={location.pathname === "/search"}>
           Pesquisar Livros
         </ButtonNav>
       </div>

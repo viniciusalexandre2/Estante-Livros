@@ -25,25 +25,17 @@ export const ButtonNav = styled(Link)`
   background: none;
   border: none;
   cursor: pointer;
-  position: relative;
   font-weight: 700;
   font-size: 17px;
+  color: ${({ isActive }) => {
+    if (isActive) {
+      return "red";
+    }
+  }};
 
   padding-bottom: 5px;
 
-  &::after {
-    content: "";
-    height: 2px;
-    width: ${(props) => (props.isactive ? "100%" : 0)};
-    background-color: red;
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width 0.5s ease-in-out;
-  }
-
-  &:hover::after {
-    width: 100%;
+  &:hover {
+    color: red;
   }
 `;

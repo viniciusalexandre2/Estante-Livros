@@ -1,7 +1,7 @@
 # Estante-Livros
 # <p align="center">📚 ESTANTE DE LIVROS</p>
 
-### Trabalho final de LP e POO. 
+### Trabalho final de Progamação Web. 
 Os arquivos .js estão na pasta `"src"`, e as funcionalidades principais do projeto estão organizadas dentro dessa pasta.
 
 ## Sumário

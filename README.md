@@ -27,7 +27,7 @@ O sistema permite adicionar novos livros, mover entre categorias e visualizar os
 
 ## Tecnologias Utilizadas
 
-- React.js** - `Framework para construção da interface`
+- React.js - `Framework para construção da interface`
 - **HTML** - `Estrutura da página`
 - **CSS** - `Estilização e layout`
 - **JavaScript** - `Funcionalidade do site`

@@ -67,11 +67,15 @@ Siga os passos abaixo para configurar e executar o projeto:
 ### **Tela Inicial**
 ![Tela Inicial](https://github.com/viniciusalexandre2/Estante-Livros/blob/main/img%20livros/inicial.img.png)
 
-### **Adicionando um Livro**
-![Adicionar Livro](imagens/adicionar-livro.png)
+### **Estou Lendo**
+![Adicionar Livro](https://github.com/viniciusalexandre2/Estante-Livros/blob/main/img%20livros/lendo.img.png)
 
-### **Organizando os Livros**
-![Organizar Livros](imagens/organizar-livros.png)
+### **Quero Ler**
+![Organizar Livros](https://github.com/viniciusalexandre2/Estante-Livros/blob/main/img%20livros/ler.img.png)
+
+### **Ja Lido**
+![Organizar Livros](https://github.com/viniciusalexandre2/Estante-Livros/blob/main/img%20livros/lido.img.png)
+
 
 ---
 

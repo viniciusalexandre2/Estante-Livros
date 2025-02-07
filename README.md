@@ -27,6 +27,7 @@ O sistema permite adicionar novos livros, mover entre categorias e visualizar os
 
 ## Tecnologias Utilizadas
 
+- React.js** - `Framework para construção da interface`
 - **HTML** - `Estrutura da página`
 - **CSS** - `Estilização e layout`
 - **JavaScript** - `Funcionalidade do site`
@@ -64,7 +65,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 ## 📷 Imagens
 
 ### **Tela Inicial**
-![Tela Inicial](imagens/tela-inicial.png)
+![Tela Inicial](inicial.img)
 
 ### **Adicionando um Livro**
 ![Adicionar Livro](imagens/adicionar-livro.png)

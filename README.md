@@ -65,7 +65,7 @@ Siga os passos abaixo para configurar e executar o projeto:
 ## 📷 Imagens
 
 ### **Tela Inicial**
-![Tela Inicial](inicial.img)
+![Tela Inicial](https://github.com/viniciusalexandre2/Estante-Livros/blob/main/img%20livros/inicial.img.png)
 
 ### **Adicionando um Livro**
 ![Adicionar Livro](imagens/adicionar-livro.png)
